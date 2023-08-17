@@ -1,11 +1,13 @@
-import { configurationOpeaiAI, textCompletion } from "./src/openai"
+import { configurationOpeaiAI, textCompletion } from "../src/openai"
+const inputPrompt = require("../models/input-prompt")
 
 export async function sendText(req, res){
   const openaiAPI = configurationOpeaiAI()
+  const inputModel = new inputPrompt(req.body)
 
   try {
     const response = await openaiAPI.createCompletion(
-      textCompletion("Eu gosto de vc")
+      textCompletion(inputModel)
     )
 
     return res.status(200).json({
