@@ -55,4 +55,8 @@ node server
 
 Aparecerá a mensagem no terminal como "servidor na porta: 5555".
 
+## OBSERVAÇÃO
+
+Caso ocorra algum problema de requisição, verifique a sua API Key e seu e-mail. As vezes a OpenAI envia uma notificação para o e-mail da sua conta. 
+
 
