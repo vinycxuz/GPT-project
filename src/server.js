@@ -1,8 +1,8 @@
-const app = require("./app");
+import { listen } from "./app";
 const port = 5555
-require('dotenv/config')
+import 'dotenv/config';
 
-app.listen(port, () => {
+listen(port, () => {
   console.log(`servidor na porta: ${port}`)
 })
 
