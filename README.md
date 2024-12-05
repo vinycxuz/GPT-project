@@ -1,4 +1,4 @@
-# Aplicação Web de Conversa com GPT-4 
+# Aplicação Web de Conversa com Perplexity-AI
 
 OBS: A configuração do backend está feita, o front ainda está em desenvolvimento, por isso só é possível testar no terminal e console.
 
