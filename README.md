@@ -2,7 +2,7 @@
 
 OBS: A configuração do backend está feita, o front ainda está em desenvolvimento, por isso só é possível testar no terminal e console.
 
-Esta aplicação web utiliza a API GPT-4 para criar uma experiência de conversa inteligente e contextual. O backend é desenvolvido em NodeJS e Express, e a estrutura do projeto segue uma organização modularizada dentro da pasta `src`. A aplicação inclui os seguintes diretórios:
+Esta aplicação web utiliza a API para criar uma experiência de conversa inteligente e contextual. O backend é desenvolvido em NodeJS e Express, e a estrutura do projeto segue uma organização modularizada dentro da pasta `src`. A aplicação inclui os seguintes diretórios:
 
 - `controllers`: Gerencia a lógica de interação com a API GPT-4.
 - `routes`: Define as rotas da aplicação para manipular as requisições do cliente.
@@ -37,12 +37,10 @@ npm install express eslint openai cors
  O código que recebe está no arquivo openai.js:
 
 ```javascript
-static configuration() { 
-    const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-    })
-    return new OpenAIApi(configuration);
-  }
+const configuration = new Configuration({
+  apiKey: YOUR_API_KEY,
+  basePath: "https://api.perplexity.ai",
+});
 ```
 
 ## Executando a Aplicação
