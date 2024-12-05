@@ -1,7 +1,9 @@
 import axios from 'axios';
-const URL_API = 'https://localhost:3000/api/prompt'
+const URL_API = 'http://localhost:5555/api/prompt'
 
 export const makeRequest = async (message) => {
   const {data} = await axios.post(URL_API, message)
+  console.log(message)
+
   return data
 }
